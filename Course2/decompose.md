@@ -31,6 +31,8 @@ DDD（领域驱动设计，Domain driven design）
 
 限界上下文
 
+![限界上下文](./assets/bounded_context.png)
+
 ## 2.3 拆分原则
 
 ## SINGLE RESPONSIBILITY PRINCIPLE(单一职责原则)
