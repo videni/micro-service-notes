@@ -7,7 +7,7 @@
   - [4. 基于消息队列的通讯模式](#4-基于消息队列的通讯模式)
     - [4.1 如何基于消息队里实现请求回复模式](#41-如何基于消息队里实现请求回复模式)
     - [4.2 如何处理重复消息？](#42-如何处理重复消息)
-    - [4.3 如何保证消息顺序？](#43-如何保证消息顺序)
+    - [4.3 一个生产者，多个消费者，如何确保一个订单的消息派发给同一个的消费者， 且保证消息的顺序？](#43-一个生产者多个消费者如何确保一个订单的消息派发给同一个的消费者-且保证消息的顺序)
     - [4.4 事务中的消息](#44-事务中的消息)
 
 ## 1. 有哪些通讯方式？
@@ -29,12 +29,13 @@ RPC, GRPC, Message Queue, HTTP(RESTfull, GraphQL)
 * 同步调用
 * 异步调用
 
-
 ## 3. 消息的格式
 
 * 纯文本
 * 二进制(Protobuff, Apache Thrift)
   
+[Beating JSON performance with Protobuf](https://auth0.com/blog/beating-json-performance-with-protobuf/)
+
 ## 4. 基于消息队列的通讯模式
 
 ![基于消息队列的通讯模式](./assets/1627461333618.jpg)
@@ -50,8 +51,10 @@ RPC, GRPC, Message Queue, HTTP(RESTfull, GraphQL)
 
 ### 4.2 如何处理重复消息？
 
-### 4.3 如何保证消息顺序？
+### 4.3 一个生产者，多个消费者，如何确保一个订单的消息派发给同一个的消费者， 且保证消息的顺序？
 
+[RabbitMQ Shading](https://github.com/rabbitmq/rabbitmq-sharding)
+[rabbitmq-message-order-of-delivery](https://stackoverflow.com/questions/21363302/rabbitmq-message-order-of-delivery)
 
 ### 4.4 事务中的消息
 
