@@ -45,6 +45,17 @@ RPC, GRPC, Message Queue, HTTP(RESTfull, GraphQL)
 2. 订阅(publish-subscribe)
 
 
+connection
+
+exchange 
+
+channel
+
+queue
+
+
+[消息队列的概念](https://www.rabbitmq.com/tutorials/amqp-concepts.html)
+
 ###  4.1 如何基于消息队里实现请求回复模式
 
 ![如何基于消息队里实现请求回复模式](./assets/1627461542655.jpg)
