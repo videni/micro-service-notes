@@ -161,3 +161,50 @@ COMMIT;
 * 谓词锁
 * 索引区间锁
 * 可串行化的快照隔离
+
+## 6. 例子：Magento库存超卖问题。
+
+### 6.1  准备测试数据
+
+```
+create table inventory_test
+(
+    product_id int unsigned NOT NULL  AUTO_INCREMENT primary key,
+    quantity int NOT NULL
+);
+insert inventory_test(quantity) values(5);
+```
+
+### 6.2 模拟超卖情况
+
+1. 使用原子操作确保quantity的更新不会被多个事务覆盖, 换句话说，如果，采用“读取-修改-写回”的方式，库存会不一致。
+
+打开两个事务，先不commit, 观察第二个事务，在执行下面的`update`语句是会被挂起。
+
+```
+START TRANSACTION;
+    update inventory_test set quantity=quantity-1 where product_id=1;
+COMMIT;
+```
+
+2. 如果不允许超卖的话，则在事务的过程中，注意事务还未结束，检查quantity是小于0， 小于0则说明超卖了，立即回滚事务，撤销当前的订单。
+
+select quantity from inventory_test where product_id=1
+
+if quantity <0 {
+    rollback;
+}
+else {
+    COMMIT;
+}
+
+
+### 6.3 总结
+
+*  “update inventory_test set quantity=quantity-1 where product_id=1;” 这个是并发安全的, 这是数据库提供的原子操作
+* 原子操作本质上是锁，所以，会有锁等待问题。
+* magento允许超卖应该是故意的，简化了错误处理，但在高并发的时候，因为库存产生的锁等待，在现在的体系上，不可避免。
+
+
+
+
