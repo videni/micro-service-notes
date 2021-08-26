@@ -15,7 +15,7 @@
 
 ### 2.2 CAP理论
 
-## 3. 什么是[Sage模式](http://microservices.io/ patterns/data/saga.html)？
+## 3. 什么是[Saga模式](http://microservices.io/ patterns/data/saga.html)？
 
 基于异步消息，协调一系列本地事务，以保证数据最终一次性。
 
@@ -32,13 +32,13 @@
 
 ## 如何实现“隔离性”？
 
-* 在跨服务，没有数据库事务的情况，我们在微服务系统要面临：
+在跨服务，没有数据库事务的情况，我们在微服务系统要面临：
 
 * 更新丢失
 * 脏读
 * 不可重复读
 
-* 解决方法
+解决方法
 
 * 语义化版本锁(Semantic lock)— 应用层锁
 * 可交换更新(Commutative updates)—Design update operations to be executable in any order.
