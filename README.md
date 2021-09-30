@@ -1,6 +1,8 @@
 微服务设计模式
 ============
 
+A series of courses to help you understand Microservce which is not astonishing as you might think, it is easy!
+
 1. [单体架构与微服务架构差异](./Course1:%20What%20is%20Microservice/index.md)
 2. [拆分单体架构策略](./Course2:%20Decompose%20monolithic%20system/index.md)
 3. [微服务集成]((./../Course3:%20Message%20queue/index.md))
