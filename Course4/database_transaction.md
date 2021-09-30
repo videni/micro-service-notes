@@ -212,8 +212,8 @@ START TRANSACTION;
 COMMIT;
 ```
 
-2. 如果不允许超卖的话，则在事务的过程中，注意事务还未结束，检查quantity是否小于0， 小于0则说明超卖了，立即回滚事务，撤销当前的订单。
-
+2. 如果不允许超卖的话，则在事务的过程中，注意事务还未结束，检查quantity是否小于0， 小于0则说明超卖了，立即回滚事务，撤销当前的订单
+。
 ```
 select quantity from inventory_test where product_id=1
 
