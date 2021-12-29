@@ -13,7 +13,6 @@
   - [3.5 定义服务接口](#35-定义服务接口)
   - [相关书籍](#相关书籍)
   
-
 ## 1. 何为架构？ 
 
 >The software architecture of a computing system is the set of structures needed to reason about the system, which comprise software elements, relations among them, and properties of both.
@@ -33,14 +32,17 @@
 
 ## 3. 动手拆分
 
+![](./assets/2021-12-29-16-59-58.png)
+
 user story  
 
 1个user story可能会有多个场景， 场景pre-conditions 和 post-conditions
 
+![](./assets/2021-12-29-16-59-15.png)
 
-user story 能产生
+user story 能产生 domain model & operation
 
- domain model & operation
+![](./assets/2021-12-29-17-02-30.png)
 
 ### 3.1 按业务拆分
 
