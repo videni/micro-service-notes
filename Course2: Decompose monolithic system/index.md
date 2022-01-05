@@ -50,7 +50,6 @@ user story 能产生 domain model & operation
 
 ![Example](./assets/2.8.jpg)
 
-
 ## 3.2 按子领域拆分
 
 ![按子领域拆分](./assets/2.9.jpg)
