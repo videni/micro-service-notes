@@ -62,6 +62,8 @@ _PENDING的Ticket（也就是Kitchen Service自己的Order）。
 
 * Compensating transactions
 
+![](./assets/2022-01-12-17-27-00.png)
+
 ## 4. Saga管理事务的方式？
 
 * 分散(Choreography)
