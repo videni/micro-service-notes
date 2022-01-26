@@ -29,6 +29,21 @@ _PENDING的Ticket（也就是Kitchen Service自己的Order）。
 
 ## 1. 为什么需要分布式事务？
 
+
+ACID
+
+A： 原子
+
+~~C~~:  
+
+I:  并发
+
+乐观锁
+
+update  set content  where content == content ;
+
+~~D: 持久性~~
+
 ## 2. 分布式事务的问题
 
 ### 2.1 什么是[两阶段提交](https://zhuanlan.zhihu.com/p/35616810)？
