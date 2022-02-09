@@ -10,10 +10,10 @@ The design of the Order Service and the Create Order Saga
         - [CreateOrderSagaState class](#createordersagastate-class)
         - [KitchenServiceProxy class](#kitchenserviceproxy-class)
       - [OrderCommandHandlers class](#ordercommandhandlers-class)
-  - [实例： eventuate tram saga 框架](#实例-eventuate-tram-saga-框架)
     - [创建CreateOrderSaga实例的流程](#创建createordersaga实例的流程)
+  - [参考： eventuate tram saga 框架](#参考-eventuate-tram-saga-框架)
   - [问题1： SagaManager如何可靠的把消息发送给saga的参与者？](#问题1-sagamanager如何可靠的把消息发送给saga的参与者)
-  - [问题2： saga的参与者回复消息时，如何知道是哪个saga?](#问题2-saga的参与者回复消息时如何知道是哪个saga)
+  - [问题2： saga的参与者回复消息时，如何知道属于哪个saga?](#问题2-saga的参与者回复消息时如何知道属于哪个saga)
 
 
 ![](./assets/2022-01-26-13-51-52.png)
@@ -84,18 +84,17 @@ OrderCommandHandlers:  处理由OrderService发出的命令消息。
 
 ![](./assets/2022-01-26-14-58-10.png)
 
-
-## 实例： eventuate tram saga 框架
-
-![](./assets/2022-01-26-15-45-33.png)
-
-
 ### 创建CreateOrderSaga实例的流程
 
 ![](2022-01-26-15-50-46.png)
 
+## 参考： eventuate tram saga 框架
+
+![](./assets/2022-01-26-15-45-33.png)
+
+
 ## 问题1： SagaManager如何可靠的把消息发送给saga的参与者？
 
-## 问题2： saga的参与者回复消息时，如何知道是哪个saga? 
+## 问题2： saga的参与者回复消息时，如何知道属于哪个saga? 
 
 比如Order Service中，同时存在CreateOrderSaga和CancelOrderSaga, 假设他们存在同样类型的回复消息，我们怎么知道这个消息属于哪一个Saga?
