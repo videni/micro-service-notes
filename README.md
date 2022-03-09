@@ -8,5 +8,7 @@ A series of courses to help you understand Microservce which is not astonishing 
 3. [微服务集成]((./../Course3:%20Messaging/index.md))
 4. [分布式事务管理](./Course4:%20Manage%20transactions%20using%20Saga/index.md)
 5. [以为微服务方式实现业务功能](./Course5:%20Implementing%20business%20logic/index.md)
-6. [命令查询职责分离以及API网关](./Course6:%20CQRS/index.md)
-7. 其它（测试微服务， 微服务部署， 重构）
+6. [Understanding database](./Course6:%20Understanding%20database/index.md)
+7. [事件源](./Course7:%20Event%20sourcing/index.md)
+8. [命令查询职责分离以及API网关](./Course8:%20CQRS/index.md)
+9. 其它（测试微服务， 微服务部署， 重构）
