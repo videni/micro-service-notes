@@ -10,5 +10,5 @@ A series of courses to help you understand Microservce which is not astonishing 
 5. [以为微服务方式实现业务功能](./Course5:%20Implementing%20business%20logic/index.md)
 6. [Understanding database](./Course6:%20Understanding%20database/index.md)
 7. [事件源](./Course7:%20Event%20sourcing/index.md)
-8. [命令查询职责分离以及API网关](./Course8:%20CQRS/index.md)
+8. [命令查询职责分离以及API网关](./Course8:%20Implementing%20query/index.md)
 9. 其它（测试微服务， 微服务部署， 重构）

@@ -1,23 +1,29 @@
-CQRS
+Implementing query
 ====
 
-Command query responsibility segregation
+在微服务中实现查询
 
-## Command
+
+* API组合（API composition）
+* 命令查询职责分离（Command query responsibility segregation，CQRS）
+
+## API组合
+
+## 命令查询职责分离
+
+### Command
 
 CUD
 
-## Query
+### Query
 
 R
 
-1. API composition
 2. Dedicated data view
 
 ## How to keep data syncronized crossing services
 
 Let's assume OrderHistoryService as a dedicated database-ElasticSearch which needs all data related to order from other services.
-
 
 OrderHistoryEventHandler subscripes domain events published by MessageQueue
 ```
