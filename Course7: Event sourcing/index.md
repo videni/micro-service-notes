@@ -23,6 +23,8 @@ Persist an aggregate as a sequence of domain events that represent state changes
 ![The traditional approach to persistence maps classes to tables and objects to rows in 
 those tables](./assets/2022-03-09-14-13-12.png)
 
+[Doctrine vs Eloquent](https://www.culttt.com/2014/07/07/doctrine-2-different-eloquent/#:~:text=One%20of%20the%20big%20differences%20between%20Doctrine%202,like%20this%3A%20class%20User%20extends%20Eloquent%20%7B%20%7D)
+
 - [Object-Relational impedance mismatch](https://wikimili.com/en/Object-relational_impedance_mismatch).
   对象模型通常包含需要从多个表中分解和重建的对象的层次结构，而不是将对象存储为整体。
 
